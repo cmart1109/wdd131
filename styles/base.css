@@ -51,6 +51,7 @@ main {
     color: white;
     padding: 10px;
     text-align: center;
+    font-size: larger;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
 }
@@ -63,4 +64,16 @@ main {
 .card img {
     width: 20%;
     margin: 20px;
+}
+
+#aside {
+    width: 60%;
+}
+
+#aside div {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
