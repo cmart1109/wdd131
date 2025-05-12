@@ -1,0 +1,27 @@
+body {
+    font-family:'Roboto', Courier, monospace;
+    background-color: lightcyan;
+}
+
+header, main, footer {
+    max-width: 640px;
+    margin: 1rem auto;
+    border: 1px solid black;
+    padding: 1rem;
+}
+
+header, footer {
+    background-color: darkslategrey;
+    color: white;
+}
+
+main {
+    display: grid;
+    grid-template-rows: 1gap 1gap;
+}
+
+section {
+    padding: 1rem;
+    margin: 5px;
+    background-color: white;
+}
