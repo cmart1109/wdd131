@@ -1,6 +1,5 @@
 const radiusOutput = document.getElementById('radius');
 const areaOutput = document.getElementById('area');
-
 let area = 0;
 const PI = 3.14159;
 
