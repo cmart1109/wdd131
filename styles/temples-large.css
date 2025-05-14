@@ -16,6 +16,9 @@
     justify-content: space-around;
     }
 
+    nav a {
+    display: flex;
+    }
     #menu {
         display: none;
     }
