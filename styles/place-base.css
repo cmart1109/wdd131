@@ -1,0 +1,41 @@
+:root {
+    --primary-color: #01161E;
+    --secondary-color: #124559;
+    --tertiary-color: #AEC3B0;
+    --font-color : #EFF6E0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Outfit', 'Courier New';
+}
+
+main {
+    background-image: url("../images/roatan-hero.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header, footer {
+    background-color: var(--secondary-color);
+    color: var(--font-color);
+    text-align: center;
+    height: 10vh;
+    padding: 10px;
+}
+
+div {
+    margin: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    background-color: #fff;
+}
