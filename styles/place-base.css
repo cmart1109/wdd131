@@ -18,7 +18,7 @@ main {
     background-repeat: no-repeat;
     height: 100vh;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -31,11 +31,26 @@ header, footer {
 }
 
 div {
-    margin: 1rem;
+    margin: 2rem;
     border: 1px solid #ddd;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     text-align: center;
     background-color: #fff;
+    width: 40%;
+}
+
+div h2 {
+    background-color: var(--tertiary-color);
+    text-align: left;
+    padding: 15px;
+}
+
+.data {
+    align-self: flex-start;
+}
+
+.weather {
+    align-self: flex-end;
 }
