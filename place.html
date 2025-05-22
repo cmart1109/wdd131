@@ -16,17 +16,43 @@
     <header>
        <h1>Roatan</h1> 
     </header>
-    <main>
-        <div class="data">
-            <h2>Data</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore aperiam, facere pariatur ipsam consectetur magnam error dolores? Quisquam quasi temporibus voluptas cum eos laboriosam, explicabo ullam dolorem nobis totam. Sunt?</p>
+    <main class="hero">
+        <picture class="hero-image">
+            <source srcset="./images/roatan-hero.webp" media="(min-width:850px)">
+            <img src="./images/roa.webp" alt="Roatan Hero">
+        </picture>
+    
+        <div class="info-box data">
+            <h2><span>Data</span></h2>
+            <ul>
+                <li><strong>Area:</strong> 83 sq km</li>
+                <li><strong>Population:</strong> 53,459</li>
+                <li><strong>Capital:</strong> Coxen Hole</li>
+                <li><strong>Languages:</strong> English, Spanish</li>
+                <li><strong>Currency:</strong> Honduran Lempira</li>
+                <li><strong>Time Zone:</strong> UTC−6</li>
+                <li><strong>Calling Code:</strong> +504</li>
+                <li><strong>Internet TLD:</strong> .hn</li>
+            </ul>
         </div>
-        <div class="weather">
-            <h2>Weather</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus neque cum, debitis, recusandae vitae, natus maiores nihil eos et perspiciatis ipsum. Ex eaque repudiandae excepturi cumque soluta dolorum, veritatis maxime!</p>
+    
+        <div class="info-box weather">
+            <h2><span>Weather</span></h2>
+            <ul>
+                <img class="weather-icon" src="./images/1530391_weather_clouds_sun_sunny_icon.svg" alt="Weather icon">
+                <li><strong>Temperature:</strong> 32°C</li>
+                <li><strong>Conditions:</strong> Partly Cloudy</li>
+                <li><strong>Wind:</strong> 5 km/h</li>
+                <li><strong>Wind Chill:</strong> 9.8°C</li>
+            </ul>
         </div>
     </main>
-    <footer>Footer</footer>
+    
+    <footer>
+        <p id="year"></p>
+        <p id="lastModified"></p>
+    </footer>
     <script src="./scripts/place.js" defer></script>
+    <script src="./scripts/getDates.js"></script>
 </body>
 </html>

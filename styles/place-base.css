@@ -1,8 +1,8 @@
 :root {
     --primary-color: #01161E;
-    --secondary-color: #124559;
-    --tertiary-color: #AEC3B0;
-    --font-color : #EFF6E0;
+    --secondary-color: #2b4167;
+    --tertiary-color: #c0d2f0;
+    --font-color : #dfdfdf;
 }
 
 * {
@@ -11,15 +11,9 @@
     font-family: 'Outfit', 'Courier New';
 }
 
-main {
-    background-image: url("../images/roatan-hero.webp");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+.data, .weather { 
+    margin: 1rem 2rem;
 }
 
 header, footer {
@@ -28,23 +22,26 @@ header, footer {
     text-align: center;
     height: 10vh;
     padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 div {
-    margin: 2rem;
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+    margin: 10px;
     text-align: center;
-    background-color: #fff;
-    width: 40%;
 }
 
 div h2 {
-    background-color: var(--tertiary-color);
-    text-align: left;
-    padding: 15px;
+    font-size: 35px;
+}
+
+img {
+    width: 100%;
+}
+
+div  ul {
+    padding: 30px;
 }
 
 .data {
@@ -53,4 +50,8 @@ div h2 {
 
 .weather {
     align-self: flex-end;
+}
+
+.weather-icon {
+    width: 100px;
 }
