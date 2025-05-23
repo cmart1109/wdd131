@@ -32,6 +32,10 @@ div {
     text-align: center;
 }
 
+div::after {
+    padding: 10px;
+}
+
 div h2 {
     font-size: 35px;
 }
