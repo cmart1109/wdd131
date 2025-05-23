@@ -27,7 +27,7 @@ header, footer {
     align-items: center;
 }
 
-.weather p {
+.info-box p, .weather p {
     display: inline;
 }
 
