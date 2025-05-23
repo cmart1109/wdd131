@@ -27,6 +27,10 @@ header, footer {
     align-items: center;
 }
 
+.weather p {
+    display: inline;
+}
+
 div {
     margin: 10px;
     text-align: center;
