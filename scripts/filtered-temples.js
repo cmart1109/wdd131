@@ -99,8 +99,8 @@ function getCards(temples) {
     let img = document.createElement("img");
 
     name.textContent = temple.templeName;
-    location.textContent = temple.location;
-    dedication.textContent = temple.dedicated;
+    location.textContent = `Location: ${temple.location}`;
+    dedication.textContent = `Dedicated: ${temple.dedicated}`;
     size.textContent = `${temple.area} ft sq`;
     img.setAttribute("src",temple.imageUrl);
     img.setAttribute("alt",temple.templeName);
