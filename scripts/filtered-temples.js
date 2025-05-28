@@ -1,5 +1,11 @@
+const album = document.getElementById("album");
 const button = document.querySelector('#menu');
-const navigation = document.querySelector('.navigation')
+const mainButton = document.querySelector('.main')
+const oldButton = document.querySelector('.old');
+const newButton = document.querySelector('.new')
+const smallButton = document.querySelector('.small');
+const largeButton = document.querySelector('.large');
+const navigation = document.querySelector('.navigation');
 const temples = [
   {
     templeName: "Aba Nigeria",
@@ -83,9 +89,77 @@ const temples = [
   }
 ];
 
+function getCards(temples) {
+  temples.forEach(temple => {
+    let templeCard = document.createElement("div");
+    let name = document.createElement("h2");
+    let location = document.createElement("p");
+    let dedication = document.createElement("p");
+    let size = document.createElement("p");
+    let img = document.createElement("img");
+
+    name.textContent = temple.templeName;
+    location.textContent = temple.location;
+    dedication.textContent = temple.dedicated;
+    size.textContent = `${temple.area} ft sq`;
+    img.setAttribute("src",temple.imageUrl);
+    img.setAttribute("alt",temple.templeName);
+    img.setAttribute("loading","lazy");
+
+    templeCard.appendChild(name);
+    templeCard.appendChild(location);
+    templeCard.appendChild(dedication);
+    templeCard.appendChild(size);
+    templeCard.appendChild(img);
+    album.appendChild(templeCard);
+  });
+}
 
 button.addEventListener('click', () => {
     navigation.classList.toggle("open");
     button.classList.toggle("open");
 });
+
+
+function ClearGallery() {
+  album.innerHTML = "";
+}
+
+function getMainTemples(templesArray) {
+  ClearGallery();
+  getCards(templesArray)  
+}
+
+function getOldTemples(templesArray) {
+  ClearGallery();
+  let newArray = templesArray.filter(temples => temples.dedicated.charAt(0) === "1");
+  getCards(newArray);
+}
+
+function getNewTemples(templesArray) {
+  ClearGallery();
+  let newArray = templesArray.filter(temples => temples.dedicated.charAt(0) === "2");
+  getCards(newArray);
+}
+
+function getSmallTemples(templesArray) {
+  ClearGallery();
+  let newArray = templesArray.filter(temples => temples.area < 60000);
+  getCards(newArray);
+}
+
+function getLargeTemples(templesArray) {
+  ClearGallery();
+  let newArray = templesArray.filter(temples => temples.area >= 60000);
+  getCards(newArray);
+}
+
+mainButton.addEventListener("click", () => getMainTemples(temples));
+oldButton.addEventListener("click", () => getOldTemples(temples));
+newButton.addEventListener("click", () => getNewTemples(temples));
+smallButton.addEventListener("click", () => getSmallTemples(temples));
+largeButton.addEventListener("click", () => getLargeTemples(temples));
+document.addEventListener("DOMContentLoaded", () => {
+  getMainTemples(temples);
+})
 
