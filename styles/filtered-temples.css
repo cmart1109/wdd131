@@ -83,6 +83,7 @@ main {
       overflow: hidden;
       text-align: center;
       background-color: #fff;
+      margin: 10px;
 }
 
 #album h2 {
