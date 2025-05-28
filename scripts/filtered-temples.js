@@ -80,12 +80,12 @@ const temples = [
     "https://churchofjesuschristtemples.org/assets/img/temples/san-pedro-sula-honduras-temple/san-pedro-sula-honduras-temple-52518-main.jpg"
   },
   {
-    templeName: "San Salvador El Salvador Temple", 
-    location: "San Salvador, El Salvador",
-    dedicated: "2011, August, 21",
-    area: 27986,
+    templeName: "Salt Lake City Temple", 
+    location: "Salt Lake City, Utah, United States",
+    dedicated: "1893, April, 6",
+    area: 253020,
     imageUrl:
-    "https://churchofjesuschristtemples.org/assets/img/temples/_temp/135-San-Salvador-El-Salvador-Temple.jpg"
+    "https://churchofjesuschristtemples.org/assets/img/temples/salt-lake-temple/salt-lake-temple-15669-main.jpg"
   }
 ];
 
@@ -132,7 +132,7 @@ function getMainTemples(templesArray) {
 
 function getOldTemples(templesArray) {
   ClearGallery();
-  let newArray = templesArray.filter(temples => temples.dedicated.charAt(0) === "1");
+  let newArray = templesArray.filter(temples => temples.dedicated.charAt(1) === "8");
   getCards(newArray);
 }
 
@@ -144,13 +144,13 @@ function getNewTemples(templesArray) {
 
 function getSmallTemples(templesArray) {
   ClearGallery();
-  let newArray = templesArray.filter(temples => temples.area < 60000);
+  let newArray = templesArray.filter(temples => temples.area < 10000);
   getCards(newArray);
 }
 
 function getLargeTemples(templesArray) {
   ClearGallery();
-  let newArray = templesArray.filter(temples => temples.area >= 60000);
+  let newArray = templesArray.filter(temples => temples.area >= 90000);
   getCards(newArray);
 }
 
