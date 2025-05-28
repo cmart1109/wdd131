@@ -15,6 +15,7 @@
     nav button {
     display: flex;
     }
+    
     #menu {
         display: none;
     }
@@ -28,9 +29,5 @@
 
     #album img {
         width: 100%;
-    }
-
-    #album img::hover {
-        width: 150%;
     }
 }
