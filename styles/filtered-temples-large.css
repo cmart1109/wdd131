@@ -1,0 +1,32 @@
+@media screen and (min-width: 850px) {
+    .album {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        grid-gap: 25px;
+
+
+;
+    
+    }
+
+    nav {
+    flex-direction: row;
+    height: 8vh;
+    display: flex;
+    justify-content: space-around;
+    }
+
+    nav a {
+    display: flex;
+    }
+    #menu {
+        display: none;
+    }
+    main {
+        max-width: 100%;
+    }
+
+    figure {
+        margin: 10px;
+    }
+}
