@@ -1,0 +1,105 @@
+:root {
+    --primary-color: #171717;
+    --secondary-color: #0c1631;
+    --tertiary-color: #f28f3b;
+    --font-color: #ffffff;
+    --alternative-color: #d8dee9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Jost, sans-serif;
+}
+
+header, footer, header a {
+    background-color: var(--primary-color);
+    padding: 1rem;
+    color: var(--font-color);
+}
+
+main {
+    color: var(--font-color);
+    background-color: var(--secondary-color);
+    min-height: 150vh;
+}
+
+ul a {
+    text-decoration: none;
+    padding: 1rem;
+    font-size: 20px;
+    transition: color 0.2s ease-in-out;
+}
+
+ul a:hover {
+    color: var(--tertiary-color);
+}
+
+.poster {
+    display: flex;
+    height: 356px;
+    height: 468px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.movies {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    overflow-x: auto;
+}
+
+.poster img {
+    width: 90%;
+    height: 80%;
+    border-radius: 10px;
+    transition: width, 0.4s;
+}
+
+.poster img:hover {
+    width: 92%;
+    height: 85%;
+}
+
+.color-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem;
+}
+
+.color {
+    height: 25px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.primary {
+    background-color: var(--primary-color);
+}
+
+.secondary {
+    background-color: var(--secondary-color);
+    border: 1px solid var(--font-color);
+}
+
+.tertiary {
+    background-color: var(--tertiary-color);
+}
+
+.font {
+    background-color: var(--alternative-color);
+    color: var(--primary-color);
+}
+
+.wireframe-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem;
+
+}
