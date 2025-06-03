@@ -1,7 +1,7 @@
 :root {
     --primary-color: #171717;
     --secondary-color: #0c1631;
-    --tertiary-color: #f28f3b;
+    --tertiary-color: #b85600;
     --font-color: #ffffff;
     --alternative-color: #d8dee9;
 }
@@ -24,14 +24,14 @@ main {
     min-height: 150vh;
 }
 
-ul a {
+nav a {
     text-decoration: none;
     padding: 1rem;
     font-size: 20px;
     transition: color 0.2s ease-in-out;
 }
 
-ul a:hover {
+nav a:hover {
     color: var(--tertiary-color);
 }
 
