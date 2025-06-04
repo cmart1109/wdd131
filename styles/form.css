@@ -13,9 +13,13 @@
 }
 
 header, footer {
-    background-color: #024471;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: white;
     text-align: center;
+    min-height: 10vh;
 }
 
 main {
@@ -23,17 +27,16 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: black;
 }
 
 form {
-    border: 2px solid black;
+    margin-top: 10px;
+    margin-bottom: 10px;
     width: 420px;
     background: transparent;
-    background-color: var(--primary-color);
+    background-color: var(--tertiary-color);
     border-radius: 10px;
     padding: 30px 40px;   
-    color: white;
 }
 
 h1 {
@@ -49,14 +52,12 @@ h1 {
 
 .container input, .container textarea, .container select {
     height: 100%;
-    background: transparent;
     border: none;
     outline: none;
     border: 1px solid var(--font-color);
     border-radius: 10px;
     font-size: 16px;
     padding: 20px 45px 20px 20px;
-    color: white;
 }
 
 .container input:hover {
@@ -65,16 +66,23 @@ h1 {
 
 .btn input {
     width: 100%;
-    height: 45px;
-    background: white;
+    background: var(--secondary-color);
     border: none;
     outline: none;
     border-radius: 40px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     font-size: 16px;
-    color: #333;
+    color: var(--font-color);
     font-weight: 600;
+    transition: all 0.2s ease-in-out;
+    height: 5vh;
+}
+
+.btn input:hover {
+    background: var(--primary-color);
+    color: var(--font-color);
+    font-size: 18px;
 }
 
 .radio-box {
