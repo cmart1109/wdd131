@@ -6,24 +6,89 @@
     <title>Form - Christian Martinez - WDD 131</title>
     <meta name="description" content="This is a form for WDD 131 course.">
     <meta name="author" content="Christian Martinez">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/form.css">
 </head>
 <body>
     <header>
-        <h1>Form Example</h1>
+        <h1>Form Product Review</h1>
     </header>
     <main>
         <form action="review.html" method="get">
-            <select name="products" id="products">
-                <option value="" selected disabled>Select a Product</option>
+            <div class="select container">
+                <label for="products">Product Name</label>
+                <select name="products" id="products" class="input-box">
+                    <option value="" selected disabled>Select a Product</option>
+            </div>
             </select>
-            <input type="radio" name="shipping" id="standard" value="standard" checked>
-            <label for="standard">Standard Shipping</label>
+            <p>Overall Rating</p>
+            <div class="radio-box">
+                <div class="star-rating">
+                    <label for="over1">*</label>
+                    <input type="radio" name="overall" id="over1" value="1" checked>
+                </div>
+                <div class="star-rating">
+                    <label for="over2">**</label>
+                    <input type="radio" name="overall" id="over2" value="2">
+                </div>
+                <div class="star-rating">
+                    <label for="over3">***</label>
+                    <input type="radio" name="overall" id="over3" value="3">
+                </div>
+                <div class="star-rating">
+                    <label for="over4">****</label>
+                    <input type="radio" name="overall" id="over4" value="4">
+                </div>
+                <div class="star-rating">
+                    <label for="over5">*****</label>
+                    <input type="radio" name="overall" id="over5" value="5">
+                </div>
+            </div>
+            <div class="date container">
+                <label for="date">Date of Installation</label>
+                <input type="date" name="date" id="date" class="input-box">
+            </div>
             
-
+            <div class="checkbox-box">
+                <p>Which features did you find useful in the product?</p>
+                <p>Check all that apply!</p>
+                <div class="checking">
+                    <input type="checkbox" name="features" id="feature1" value="ft1">
+                    <label for="feature1">Durability</label>
+                </div>
+                <div class="checking">
+                    <input type="checkbox" name="features" id="feature2" value="ft2">
+                    <label for="feature2">Ease of Use</label>
+                </div>
+                <div class="checking">
+                    <input type="checkbox" name="features" id="feature3" value="ft3">
+                    <label for="feature3">Performance</label>
+                </div>
+                <div class="checking">
+                    <input type="checkbox" name="features" id="feature4" value="ft4">
+                    <label for="feature4">Design</label>
+                </div>
+            </div>
+            <div class="textarea container">
+                <label for="review">Written Review (Optional)</label>
+                <textarea name="review" id="review" class="input-box"></textarea>
+            </div>
+            <div class="name container">
+                <label for="name">Name (Optional)</label>
+                <input type="text" name="name" id="name" class="input-box">
+            </div>
+            <div class="btn">
+                <input type="submit" value="Submit">
+            </div>
         </form>
     </main>
     <footer>
 
+    <p id="year"></p>
+        <p id="lastModified"></p>
     </footer>
+    <script src="scripts/getDates.js"></script>
 </body>
 </html>
