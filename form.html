@@ -19,7 +19,7 @@
         <form action="review.html" method="get">
             <div class="select container">
                 <label for="products">Product Name</label>
-                <select name="products" id="products" class="input-box">
+                <select name="products" id="products" class="input-box" required>
                     <option value="" selected disabled>Select a Product</option>
                 </select>
             </div>
@@ -48,7 +48,7 @@
             </div>
             <div class="date container">
                 <label for="date">Date of Installation</label>
-                <input type="date" name="date" id="date" class="input-box">
+                <input type="date" name="date" id="date" class="input-box" required>
             </div>
             
             <div class="checkbox-box">
@@ -71,7 +71,7 @@
                     <label for="feature4">Design</label>
                 </div>
             </div>
-            
+
             <div class="textarea container">
                 <label for="review">Written Review (Optional)</label>
                 <textarea name="review" id="review" class="input-box"></textarea>
@@ -81,7 +81,7 @@
                 <input type="text" name="name" id="name" class="input-box">
             </div>
             <div class="btn">
-                <input type="submit" value="Submit">
+                <input type="submit" value="Submit" id="submit">
             </div>
         </form>
     </main>
@@ -91,5 +91,6 @@
         <p id="lastModified"></p>
     </footer>
     <script src="scripts/getDates.js"></script>
+    <script src="scripts/form.js"></script>
 </body>
 </html>
