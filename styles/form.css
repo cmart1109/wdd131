@@ -117,3 +117,20 @@ h1 {
     width: 15px;
     height: 15px;
 }
+
+.again {
+    background-color: var(--secondary-color);
+    color: var(--font-color);
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;   
+    transition: all 0.2s ease-in-out;
+}
+
+.again:hover {
+    background-color: var(--primary-color);
+    color: var(--font-color);
+}

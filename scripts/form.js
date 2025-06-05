@@ -1,6 +1,6 @@
 const productsList = document.getElementById("products");
 const submitButton = document.getElementById("submit");
-let reviewCounter = 0
+let reviewCounter = 0;
 
 const products = [
   {
@@ -40,9 +40,13 @@ function createProductOption() {
 }
 
 function addReview() {
-    reviewCounter++
+    if (reviewCounter == undefined) {
+      reviewCounter = 1;
+    }
+    else {
+      reviewCounter++;
+    }
     setReviews();
-    
 }
 
 submitButton.addEventListener("click", addReview)
@@ -52,10 +56,11 @@ function setReviews() {
 }
 
 function getReviews() {
-    JSON.parse(localStorage.getItem("reviews")) || 0;
+    return JSON.parse(localStorage.getItem("reviews")) || 0;
 
 }
 
 
-
+reviewCounter = getReviews();
 createProductOption();
+console.log(reviewCounter);

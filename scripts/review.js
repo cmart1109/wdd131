@@ -1,5 +1,5 @@
 let reviewNumber = document.getElementById("review-number");
-let reviewCounter = 0
+let reviewCounter;
 
 function getReviews() {
     return JSON.parse(localStorage.getItem("reviews")) || 0;
@@ -7,8 +7,10 @@ function getReviews() {
 }
 
 function setReviewsMessage() {
-    reviewCounter = getReviews();
     reviewNumber.textContent = `You have submitted ${reviewCounter} reviews.`;
 }
 
+
+reviewCounter = getReviews();
 setReviewsMessage();
+console.log(reviewCounter);
